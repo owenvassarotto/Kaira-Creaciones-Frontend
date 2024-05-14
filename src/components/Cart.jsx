@@ -29,6 +29,11 @@ const Cart = () => {
   const [loading, setLoading] = useState(false);
   
   const handlePurchaseOrder = async () => {
+
+    if(!auth?.id){
+      notify("error", "Inicia sesión o create una cuenta para realizar una orden");
+      return;
+    }
     
     const token = localStorage.getItem('token_kaira_creaciones');
     if(!token) return;
