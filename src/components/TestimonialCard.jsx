@@ -9,7 +9,7 @@ const TestimonialCard = ({ data }) => {
         <div className='w-full flex flex-col items-center'>
             <img 
                 className='w-full h-[310px] rounded-md object-cover'
-                src={import.meta.env.VITE_BACKEND_URL + `/uploads/testimonials/${data.image}`} 
+                src={data.image} 
                 alt="Foto de testimonio" 
             />
             

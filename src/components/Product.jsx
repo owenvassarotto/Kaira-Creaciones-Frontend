@@ -20,7 +20,7 @@ const Product = ({ product }) => {
             {/* image */}
             <div className="w-full h-[250px] mb-10 flex flex-col items-center justify-center">
                 <img 
-                    src={import.meta.env.VITE_BACKEND_URL + `/uploads/products/${product.image}`} alt={`Foto del producto ${product.title}`} 
+                    src={product.image} 
                     className="object-cover w-full h-full group-hover:scale-90 transition-all rounded-t-md"
                 />
                 {/* category name */}

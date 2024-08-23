@@ -131,7 +131,7 @@ const OrderCard = ({ data }) => {
                   <div className="flex gap-4 text-sm w-full sm:items-center" key={orderProduct.id}>
                     {/* image, title and quantity */}
                     <img 
-                      src={import.meta.env.VITE_BACKEND_URL + `/uploads/products/${product.image}`} 
+                      src={product.image} 
                       className="min-w-20 h-20 rounded-lg"
                       alt={product.title}
                     />

@@ -1,10 +1,23 @@
-import TestimonialCard from './TestimonialCard'
-import Slider from 'react-slick'
-import useTestimonialsContext from '../hooks/useTestimonialsContext'
+import TestimonialCard from "./TestimonialCard";
+import Slider from "react-slick";
+import useTestimonialsContext from "../hooks/useTestimonialsContext";
+import Spinner from "./Spinner";
 
 const Testimonials = () => {
-
   const { testimonials } = useTestimonialsContext();
+
+  if (!testimonials || testimonials.length === 0) {
+    return (
+      <div className="mb-14">
+        <h2 className="uppercase text-2xl text-primary font-bold text-center mb-6">
+          Sus opiniones
+        </h2>{" "}
+        <div className="flex justify-center my-20">
+          <Spinner />
+        </div>
+      </div>
+    );
+  }
 
   var settings = {
     dots: false,
@@ -22,8 +35,8 @@ const Testimonials = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 600,
@@ -31,27 +44,31 @@ const Testimonials = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-        }
+        },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
 
   return (
-    <section className='mb-14'>
-        <h2 className='uppercase text-2xl text-primary font-bold text-center mb-6'>Sus opiniones</h2>
+    <section className="mb-14">
+      <h2 className="uppercase text-2xl text-primary font-bold text-center mb-6">
+        Sus opiniones
+      </h2>
 
-        <Slider {...settings}>
-          {testimonials?.map(testimonial => <TestimonialCard key={testimonial.id} data={testimonial} />)}
-        </Slider>
+      <Slider {...settings}>
+        {testimonials?.map((testimonial) => (
+          <TestimonialCard key={testimonial.id} data={testimonial} />
+        ))}
+      </Slider>
     </section>
-  )
-}
+  );
+};
 
-export default Testimonials
+export default Testimonials;

@@ -44,7 +44,7 @@ const TestimonialAdminCard = ({ testimonial }) => {
         <div>
           <p className="font-bold uppercase text-sm mb-1">Imagen:</p> 
           <img 
-            src={import.meta.env.VITE_BACKEND_URL + `/uploads/testimonials/${image}`} 
+            src={image} 
             className="rounded-md w-20 h-28 object-cover"
           />
         </div>

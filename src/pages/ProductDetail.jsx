@@ -43,7 +43,7 @@ const ProductDetail = () => {
 
         <div className="lg:w-1/2">
           <img 
-            src={import.meta.env.VITE_BACKEND_URL + `/uploads/products/${productData.image}`} 
+            src={productData.image} 
             alt={`Foto del producto ${productData.title}`} 
             className="w-full max-h-[500px] rounded-md object-cover"
           />

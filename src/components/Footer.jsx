@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center mb-5 gap-3">
         <Link 
           to={"/faq"}
-          className="font-semibold text-primary text-lg"
+          className="font-semibold text-primary text-lg underline hover:scale-105"
         >
           Preguntas frecuentes
         </Link>

@@ -22,7 +22,7 @@ const ProductAdminCard = ({ product }) => {
         <div>
           <p className="font-bold uppercase text-sm mb-1">Imagen:</p> 
           <img 
-            src={import.meta.env.VITE_BACKEND_URL + `/uploads/products/${image}`} 
+            src={image} 
             className="rounded-md w-28"
           />
         </div>

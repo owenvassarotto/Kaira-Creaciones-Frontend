@@ -19,7 +19,7 @@ const CartItem = ({ item }) => {
         >
             <img 
                 className='w-full h-full rounded-sm hover:scale-105 transition-all'
-                src={import.meta.env.VITE_BACKEND_URL + `/uploads/products/${item.image}`} 
+                src={item.image} 
             />            
         </Link>
 

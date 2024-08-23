@@ -111,7 +111,7 @@ const ProductsAdminForm = () => {
                 {productToUpdate?.image && showInputFile === false ? (
                     <div className="mt-4">
                         <img 
-                            src={import.meta.env.VITE_BACKEND_URL + `/uploads/products/${productToUpdate.image}`} 
+                            src={productToUpdate.image} 
                             className="rounded-md w-28 mb-2"
                         />
                         <p className='text-sm w-full'>{productToUpdate.image}</p>
